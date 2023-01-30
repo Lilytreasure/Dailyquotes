@@ -6,9 +6,8 @@
 
 #Screen shots
 
-![quote](https://user-images.githubusercontent.com/78819932/215464561-e53dfc94-2037-4ce1-8007-b980688816e9.png)
 
- <table align="center">
+ <table>
   <tr>
     <td><img src="https://user-images.githubusercontent.com/78819932/215464561-e53dfc94-2037-4ce1-8007-b980688816e9.png" alt="Home" style="width:250px;height:500px;"></td>
      
