@@ -4,7 +4,6 @@ import android.content.Context
 import retrofit2.*
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
-
 class RequestManager (mContext: Context){
 
     var retrofit=Retrofit.Builder()
@@ -23,20 +22,22 @@ class RequestManager (mContext: Context){
                 response: Response<List<QuotesResponse>>
             ) {
                 //if response is successful\
-                if (response.isSuccessful){
-                    println("Request Successfull")
+                if (!response.isSuccessful){
+                    listener.failed(response.message())
+                    return
                 }
+                response.body()?.let { listener.fetched(it,response.message()) }
 
             }
 
             override fun onFailure(call: Call<List<QuotesResponse>>, t: Throwable) {
-               println("Request failed")
+                t.message?.let { listener.failed(it) }
+
             }
 
         })
 
     }
-
 
 
     private interface  CallQuotes{

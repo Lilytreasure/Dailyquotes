@@ -17,13 +17,15 @@
             <com.google.android.material.appbar.MaterialToolbar
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:title="Quotes"
-                android:background="@color/custom">
+                app:title="Daily Inspiration"
+                app:titleTextColor="@color/custom"
+                android:background="@color/customGrey">
 
             </com.google.android.material.appbar.MaterialToolbar>
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerData"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/TopBar"
