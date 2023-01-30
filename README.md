@@ -6,10 +6,11 @@
 
 #Screen shots
 
+![quote](https://user-images.githubusercontent.com/78819932/215464561-e53dfc94-2037-4ce1-8007-b980688816e9.png)
 
  <table align="center">
   <tr>
-    <td><img src="https://user-images.githubusercontent.com/78819932/213650781-c9a3e8f9-091d-4366-af86-fc18a3458f57.png" alt="Home" style="width:250px;height:500px;"></td>
+    <td><img src="https://user-images.githubusercontent.com/78819932/215464561-e53dfc94-2037-4ce1-8007-b980688816e9.png" alt="Home" style="width:250px;height:500px;"></td>
      
    
   </tr>
