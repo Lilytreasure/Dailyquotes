@@ -3,10 +3,12 @@ package com.example.quotes
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.RelativeLayout
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import java.util.Random
 
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +17,10 @@ class MainActivity : AppCompatActivity() {
     //add a dialog to show progress of data loading
     var dialog: ProgressDialog? =null
     private lateinit var recyclerView: RecyclerView
+    //add random backgrounds
+    private lateinit var layoutMain:RelativeLayout
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +39,12 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView=findViewById(R.id.recyclerData)
 
+        layoutMain=findViewById(R.id.layoutmain)
+
+        //set layout background
+        //Todo***
+        //set up a variety of backgrounds displayed randomly
+        layoutMain.setBackgroundResource(R.drawable.bgimg)
 
     }
 
