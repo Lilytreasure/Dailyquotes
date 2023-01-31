@@ -6,7 +6,6 @@
 
 #Screen shots
 
-![quote 2](https://user-images.githubusercontent.com/78819932/215697496-7a6d75f3-8e81-44ca-a01c-31c6644ae6ac.png)
 
 
  <table>
