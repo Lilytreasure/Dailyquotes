@@ -6,35 +6,57 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:fitsSystemWindows="true">
-    <RelativeLayout
-        android:id="@+id/layoutmain"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/RefreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <com.google.android.material.appbar.AppBarLayout
+        <RelativeLayout
+            android:id="@+id/layoutmain"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/TopBar">
-            <com.google.android.material.appbar.MaterialToolbar
+            android:layout_height="match_parent">
+
+            <com.google.android.material.appbar.AppBarLayout
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:title="Daily Inspiration"
-                app:titleTextColor="@color/custom"
-                android:background="@color/customGrey">
+                android:layout_height="wrap_content"
+                android:id="@+id/TopBar">
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:title="Daily Inspiration"
+                    app:titleTextColor="@color/custom"
+                    android:background="@color/customGrey">
 
-            </com.google.android.material.appbar.MaterialToolbar>
-        </com.google.android.material.appbar.AppBarLayout>
+                </com.google.android.material.appbar.MaterialToolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+            <TextView
+                android:id="@+id/textNetwork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TopBar"
+                android:text="You are currently offline"
+                android:textSize="15sp"
+                android:backgroundTint="@color/custom"
+                android:background="@color/custom"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:visibility="gone">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerData"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/TopBar"
-            android:layout_marginTop="10dp">
+            </TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerData"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textNetwork"
+                android:layout_marginTop="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
 
 
-        </androidx.recyclerview.widget.RecyclerView>
+        </RelativeLayout>
 
-    </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

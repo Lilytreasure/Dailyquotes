@@ -1,6 +1,10 @@
 package com.example.quotes
 
-class QuotesResponse {
+import androidx.room.Entity
+
+
+ class QuotesResponse {
+
     var text:String=""
     var author:String=""
 }
